@@ -2,7 +2,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/angelodlfrtr/go-invoice-generator)](https://goreportcard.com/report/github.com/angelodlfrtr/go-invoice-generator)
 [![GoDoc](https://godoc.org/github.com/angelodlfrtr/go-invoice-generator?status.svg)](https://godoc.org/github.com/angelodlfrtr/go-invoice-generator)
 
-# Golang invoice generator
+# Golang invoice generator fork
 
 A super fast golang package to generate invoices, delivery notes and quotations as pdf
 using https://github.com/go-pdf/fpdf.
