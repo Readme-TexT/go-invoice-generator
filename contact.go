@@ -67,7 +67,7 @@ func (c *Contact) appendContactTODoc(
 	doc.pdf.Rect(x, doc.pdf.GetY(), 70, 8, "F")
 
 	// Set name
-	doc.pdf.SetFont(doc.Options.BoldFont, "B", 10)
+	doc.pdf.SetFont(doc.Options.BoldFont, "B", 5)
 	doc.pdf.Cell(40, 8, doc.encodeString(c.Name))
 	doc.pdf.SetFont(doc.Options.Font, "", 10)
 
