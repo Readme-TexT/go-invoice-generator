@@ -44,7 +44,7 @@ func (c *Contact) appendContactTODoc(
 		if imageInfo != nil {
 			var imageOpt fpdf.ImageOptions
 			imageOpt.ImageType = format
-			doc.pdf.ImageOptions(fileName, doc.pdf.GetX(), y, 0, 30, false, imageOpt, 0, "")
+			doc.pdf.ImageOptions(fileName, doc.pdf.GetX()+10, y-10, 0, 20, false, imageOpt, 0, "")
 			doc.pdf.SetY(y + 30)
 		}
 	}
@@ -64,10 +64,10 @@ func (c *Contact) appendContactTODoc(
 	doc.pdf.SetX(x)
 
 	// Name rect
-	doc.pdf.Rect(x, doc.pdf.GetY(), 70, 8, "F")
+	doc.pdf.Rect(x, doc.pdf.GetY(), 80, 8, "F")
 
 	// Set name
-	doc.pdf.SetFont(doc.Options.BoldFont, "B", 5)
+	doc.pdf.SetFont(doc.Options.BoldFont, "B", 8)
 	doc.pdf.Cell(40, 8, doc.encodeString(c.Name))
 	doc.pdf.SetFont(doc.Options.Font, "", 10)
 
@@ -102,5 +102,5 @@ func (c *Contact) appendCompanyContactToDoc(doc *Document) float64 {
 
 // appendCustomerContactToDoc append the customer contact to the document
 func (c *Contact) appendCustomerContactToDoc(doc *Document) float64 {
-	return c.appendContactTODoc(130, BaseMarginTop+25, true, "R", doc)
+	return c.appendContactTODoc(120, BaseMarginTop+25, true, "R", doc)
 }
